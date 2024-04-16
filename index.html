@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        *,
+        *::before,
+        *::after {
+                box-sizing: border-box;
+                padding: 0;
+                margin: 0;
+            }
+
+        html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, menu, nav, output, section, summary, time, mark, audio, video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        }
+
+        body {
+            font-family: "Roboto", sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        section{
+            padding: 0 !important;
+            margin:0 !important;
+            min-height: 0 !important;
+        }
+
+        .mySlides {
+            margin-top: 5px;
+            width: 100%;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .box {
+            width: 25%;
+            box-sizing: border-box;
+        }
+
+        .box img {
+            max-width: 100%;
+            padding: 20px 10px 10px;
+            height: auto;
+            width: 100%; /* Set width for large image */
+        }
+
+        .mobile {
+            display: none;
+        }
+
+        .video-container {
+            display: flex;
+            margin-inline: auto;
+            width: 90%;
+            height: 90%;
+            margin: 20px auto;
+            cursor: pointer; /* Change cursor to pointer when hovering over the video */
+        }
+
+        .flyer {
+            background-color: #0072CE;
+            color: #fff;
+            padding: 16px 24px;
+            text-align: left;
+        }
+
+        .flyer p {
+            font-size: 28px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        /* Media query for mobile screens */
+        @media (max-width: 768px) {
+            .box {
+                width: 50%;
+            }
+            
+            .box img {
+                align-items: center;
+                width: 400px; /* Full width for mobile */
+                height: auto;
+                max-height: 400px; /* Adjust height for mobile */
+                margin-inline: auto;
+            }
+
+            .laptop {
+                display: none;
+            }
+
+            .video-container {
+                display: flex;
+                margin-inline: auto;
+                width: 100%;
+                height: 100%;
+                margin: 5px auto;
+                cursor: pointer; /* Change cursor to pointer when hovering over the video */
+            }
+
+            .mobile {
+                display: block;
+            }
+
+            .flyer {
+                padding: 10px 16px;
+                text-align: center;
+            }
+    
+            .flyer p {
+                font-size: 18px;
+                font-weight: 600;
+            }
+        }
+
+
+    </style>
+  </head>
+
+  <body>
+    <div class="mySlides laptop">
+      <img
+        src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto/v1707911511/landingPages/CeraVe/CeraVaBanner.png"
+        style="width: 100%"
+      />
+    </div>
+
+    <div class="mySlides mobile">
+      <img
+        src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto/v1711716652/landingPages/CeraVe/Main_Banner_Mobile.jpg"
+        style="width: 100%"
+      />
+    </div>
+
+
+    <div class="mySlides">
+        <img
+          src="second banner.png"
+          style="width: 100%"
+          alt="Cerave Moisturizers"
+        />
+    </div>
+
+
+    <div class="video-container" onclick="playVideo()">
+        <video width="100%" controls autoplay muted>
+          <source src="cerave-vid.mp4" type="video/mp4">
+          Your browser does not support HTML5 video.
+        </video>
+    </div>
+
+    <div class="flyer">
+        <p>Shop by Category</p>
+    </div>
+
+        <div class="container">
+        <div class="box">
+            <a href="https://www.konga.com/search?search=CeraveBodyMoisturizers">
+                <img src="Body Moisturiser.jpg" alt="Body Moisturizers">
+            </a>
+        </div>
+        <div class="box">
+            <a href="https://www.konga.com/search?search=CeraveFaceCleansers">
+                <img src="Facial Cleanser.jpg" alt="Facial Cleansers">
+            </a>
+        </div>
+        <div class="box">
+            <a href="https://www.konga.com/search?search=CeraveFaceMoisturizers">
+                <img src="Facial Moisturiser.jpg" alt="Facial Moisturizers">
+            </a>
+        </div>
+        <div class="box">
+            <a href="https://www.konga.com/search?search=CeraveSkinRenew">
+                <img src="Body Cleanser.jpg" alt="Body Cleansers">
+            </a>
+        </div>
+    </div>
+
+
+    <div class="flyer">
+        <p>CeraVe Featured Products</p>
+    </div>
+    <img
+        src="products.png"
+        style="width: 100%"
+        alt="How does your skin feel after washing"
+    />
+  </body>
+</html>
+
+
+
+<div>
+    <div class="mySlides laptop">
+        <a href="whatsapp://send?phone=+2349059428941" target="_blank">
+            <img
+                src="derma.png"
+                style="width: 100%"
+                alt="How does your skin feel after washing"
+            />
+        </a>
+    </div>
+    <div class="mySlides mobile">
+        <a href="whatsapp://send?phone=+2349059428941" target="_blank">
+            <img
+                src="derma mobilee.png"
+                style="width: 100%"
+                alt="How does your skin feel after washing"
+            />
+        </a>
+    </div>
+</div>
+
+<div class="mySlides">
+        <img
+          src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto/v1708519855/landingPages/CeraVe/CeraVBannereBottom.png"
+          style="width: 100%"
+          alt="CeraVe Banner"
+        />
+</div>
+
+
+
+<script>
+    function playVideo() {
+      var video = document.querySelector('.video-container video');
+      video.play();
+    }
+</script>
